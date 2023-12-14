@@ -1,0 +1,99 @@
+@font-face {
+    font-family: "MyFont";
+    src: url("../asset/StyleScript-Regular.woff") format("woff");
+}
+
+
+body {
+    margin: 0;
+    width: 100vw;
+    height: fit-content;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 8svh 89svh 3svh;
+    grid-template-areas: 
+    "header header header header"
+    "sidebar cont cont cont"
+    "footer footer footer footer";
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+span { 
+    font-family: "MyFont";
+
+}
+header, footer {
+    background: #1B1B1B;
+
+    margin: 0;
+    box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.5);
+
+    z-index: 2;
+}
+
+/* HEADER */
+header {
+    grid-area: header;
+    font-size: 2rem;
+    color: #E4E4DE;
+
+}
+
+header h1 {
+    margin: 0;
+}
+
+.logo-hover:hover {
+    color: rgb(255, 58, 58);
+}
+.logo-hover:hover::after {
+    content: "!!";
+}
+.logo {
+    text-align: center;
+
+    align-self: center;
+}
+
+
+.content {
+    background: #E4E4DE;
+    grid-area: cont;
+
+
+
+    display: grid;
+    justify-items: start;
+    align-items: center;
+    grid-template-columns: repeat(1fr);
+
+    
+
+
+}
+
+.todo-card:not(.show) {
+    display: none;
+}
+
+button:not(.show){
+    display: none;
+}
+
+button {
+    margin-top: 5%;
+    align-self: center;
+    justify-self: center;
+}
+
+footer {
+    grid-area: footer;
+}
+
+footer p {
+    text-align: center;
+    color: #E4E4DE;
+    margin: 0;
+    margin-top: 2px;
+    font-size: 1rem;
+}

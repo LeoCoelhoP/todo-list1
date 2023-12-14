@@ -1,0 +1,148 @@
+/* CARD DESIGN */
+
+.todo-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(auto-fit, minmax(200px, 1fr));
+    background: white;
+    margin: 5%;
+    border-radius: 10px;
+    padding-left: 5%;
+
+    width: 85%;
+
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.2);
+
+    align-items: start;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+.todo-card:not(.show) {
+    display: none;
+    
+}
+.card-title{
+    padding-top: 5%;
+    margin: 0;
+    font-size: 3rem;
+}
+
+.card-info p {
+    font-size: 2rem;
+    margin: 0;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+
+
+/* DELETE BUTTON AND CHECK BUTTON*/
+.card-options {
+    align-self: start;
+
+    justify-self: end;
+    grid-area: 1 / 2 / -1 / -1;
+
+
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    align-items: start;
+
+    padding: 10%;
+    padding-top: 5%;
+    width: 2rem ;
+
+}
+.card-options > * {
+    margin: 0;
+}
+.card-options > *:hover {
+    cursor:pointer ;
+}
+
+.card-options p {
+    margin-bottom: 0;
+    font-size: 2rem;
+}
+
+/* CHECK BUTTON */
+.todo-card p:nth-child(1) {
+    background-color: rgb(50, 255, 50);
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.2);
+
+    color: white;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    text-align: center;
+}
+
+
+
+/* PRIORITY BUTTON */
+
+.low-priority-button, .medium-priority-button, .high-priority-button {
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.2);
+    margin-top: 50%;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    border: 5px solid white;
+
+}
+.high-priority-button {
+    background-color: rgb(255, 58, 58);
+
+}
+
+.medium-priority-button {
+    background-color: rgb(252, 195, 90);
+
+}
+
+.low-priority-button {
+    background-color: rgb(252, 252, 160);
+}
+
+.todo-card p:nth-child(1):hover, .low-priority-button:hover, .medium-priority-button:hover, .high-priority-button:hover {
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 1);
+
+}
+
+/* ACTIVE PRIORITY BUTTON */
+
+.high div:nth-child(4), .medium div:nth-child(3), .low div:nth-child(2) {
+    border-color: white;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 1);
+
+}
+
+.high div:nth-child(4) {
+    background-color: rgb(255, 58, 58);
+}
+
+.medium div:nth-child(3) {
+    background-color: rgb(252, 195, 90);
+
+}
+
+.low div:nth-child(2) {
+    background-color: rgb(252, 252, 160);
+
+}
+
+/* PRIORITY AT THE CARD BORDER */
+.high, .medium, .low {
+    border-right: 1svh solid;
+}
+.high {
+    border-color: rgb(255, 72, 72);
+}
+
+.medium {
+    border-color: rgb(252, 195, 90);
+}
+
+.low {
+    border-color: rgb(252, 252, 160);
+}
